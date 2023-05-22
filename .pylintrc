@@ -1,0 +1,6 @@
+[LOGGING]
+enable=logging-format-interpolation
+disable=logging-fstring-interpolation
+
+[FORMAT]
+good-names=n
