@@ -20,11 +20,14 @@ with open(args.file, "r", encoding="utf-8") as file:
     calorie_counts = get_calorie_counts(all_calories=all_calories)
 
     # print max calories
-    print(get_max_calorie_count(calorie_counts=calorie_counts))
+    print(
+        f"Max elf calories: "
+        f"{get_max_calorie_count(calorie_counts=calorie_counts)}"
+    )
 
     if args.size:
+        n = args.size
         print(
-            get_n_max_calories_counts(
-                calorie_counts=calorie_counts, n=args.size
-            )
+            f"Top {n} elf calorie total: "
+            f"{get_n_max_calories_counts(calorie_counts=calorie_counts, n=n)}"
         )

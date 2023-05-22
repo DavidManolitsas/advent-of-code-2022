@@ -31,7 +31,7 @@ help:
 	@echo "  deactivate"
 	@echo
 
-all: check
+all: check day-1 day-2
 
 check: format lint
 
@@ -46,6 +46,9 @@ lint:
 
 day-1:
 	python3 -m day_1 -f day_1/resources/input.txt -s 3
+
+day-2:
+	python3 -m day_2 -f day_2/resources/input.txt
 
 clean:
 	# clean generated artefacts
