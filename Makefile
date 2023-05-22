@@ -50,6 +50,9 @@ day-1:
 day-2:
 	python3 -m day_2 -f day_2/resources/input.txt
 
+day-2:
+	python3 -m day_3 -f day_3/resources/input.txt
+
 clean:
 	# clean generated artefacts
 	$(RM) -r **/__pycache__/ **/*/__pycache__/

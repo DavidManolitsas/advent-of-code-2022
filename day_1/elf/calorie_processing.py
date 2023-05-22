@@ -2,8 +2,6 @@
 Process elf calorie utility functions.
 """
 
-from io import TextIOWrapper
-
 
 def process_calories(calorie_list: list[str]) -> list[list[int]]:
     """
@@ -15,13 +13,13 @@ def process_calories(calorie_list: list[str]) -> list[list[int]]:
     return [list(map(int, (load.split("\n")))) for load in calorie_list]
 
 
-def read_calories(file: TextIOWrapper) -> list[list[int]]:
+def read_calories(calorie_input: str) -> list[list[int]]:
     """
     Read input file to list of elf calories
 
-    :param file: input calorie file
+    :param calorie_input: input calorie file
     :return: all elf calories
     """
-    calorie_list = file.read().split("\n\n")
+    calorie_list = calorie_input.split("\n\n")
     all_calories = process_calories(calorie_list=calorie_list)
     return all_calories

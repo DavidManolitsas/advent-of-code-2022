@@ -16,7 +16,7 @@ arg_parser.add_argument("-s", "--size", type=int, required=False)
 args = arg_parser.parse_args()
 
 with open(args.file, "r", encoding="utf-8") as file:
-    all_calories = read_calories(file=file)
+    all_calories = read_calories(calorie_input=file.read())
     calorie_counts = get_calorie_counts(all_calories=all_calories)
 
     # print max calories
