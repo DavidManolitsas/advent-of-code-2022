@@ -31,7 +31,7 @@ help:
 	@echo "  deactivate"
 	@echo
 
-all: check day-1 day-2
+all: check day-1 day-2 day-3
 
 check: format lint
 
@@ -41,14 +41,17 @@ format:
 	sort-requirements requirements.txt
 
 lint:
-	flake8 --verbose day_*/**
-	pylint  --verbose day_*/**
+	flake8 --verbose --ignore E203 day_*/**
+	pylint --verbose day_*/**
 
 day-1:
 	python3 -m day_1 -f day_1/resources/input.txt -s 3
 
 day-2:
 	python3 -m day_2 -f day_2/resources/input.txt
+
+day-3:
+	python3 -m day_3 -f day_3/resources/input.txt
 
 clean:
 	# clean generated artefacts

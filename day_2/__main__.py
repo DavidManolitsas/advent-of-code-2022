@@ -12,4 +12,4 @@ args = arg_parser.parse_args()
 
 with open(args.file, "r", encoding="utf-8") as file:
     games = get_games(shape_input=file.read())
-    print(f"score: {play_games(games=games)}")
+    print(f"Part two: {play_games(games=games)}")
